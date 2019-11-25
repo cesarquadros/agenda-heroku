@@ -1,0 +1,20 @@
+salas-agendamento:
+  request:
+    mapping:
+      salvar: /cliente
+      listarClientes: /cliente
+      findByCpf: /cliente/{cpf}
+      usuario: /usuario
+    
+spring:
+  data.mongodb:
+     uri: mongodb://heroku_857815pd:gj8e8d8sb5mfqq5evj5tjiilp@ds119718.mlab.com:19718/heroku_857815pd?retryWrites=false
+#    host: localhost
+#    port: 27017
+#    database: sala-agendamento-clientes
+    
+server:
+  port: 8082    
+
+#logging:
+#  file: logs/agendamento-log

@@ -1,0 +1,91 @@
+package com.ninoxsolutions.salasagendamento.common.document;
+
+import java.time.LocalDate;
+
+import org.springframework.data.annotation.Id;
+import org.springframework.data.mongodb.core.mapping.Document;
+
+import com.ninoxsolutions.salasagendamento.common.model.Autenticacao;
+
+@Document
+public class ClienteDocument {
+
+	@Id
+	private String id;
+	private String nome;
+	private String sobrenome;
+	private String telFixo;
+	private String telCelular;
+	private String cpf;
+	private String email;
+	private String sexo;
+	private LocalDate dataNascimento;
+	private Autenticacao autenticacao;
+	
+	public String getId() {
+		return id;
+	}
+	public void setId(String id) {
+		this.id = id;
+	}
+	public String getNome() {
+		return nome;
+	}
+	public void setNome(String nome) {
+		this.nome = nome;
+	}
+	public String getSobrenome() {
+		return sobrenome;
+	}
+	public void setSobrenome(String sobrenome) {
+		this.sobrenome = sobrenome;
+	}
+	public String getTelFixo() {
+		return telFixo;
+	}
+	public void setTelFixo(String telFixo) {
+		this.telFixo = telFixo;
+	}
+	public String getTelCelular() {
+		return telCelular;
+	}
+	public void setTelCelular(String telCelular) {
+		this.telCelular = telCelular;
+	}
+	public String getCpf() {
+		return cpf;
+	}
+	public void setCpf(String cpf) {
+		this.cpf = cpf;
+	}
+	public String getEmail() {
+		return email;
+	}
+	public void setEmail(String email) {
+		this.email = email;
+	}
+	public String getSexo() {
+		return sexo;
+	}
+	public void setSexo(String sexo) {
+		this.sexo = sexo;
+	}
+	public LocalDate getDataNascimento() {
+		return dataNascimento;
+	}
+	public void setDataNascimento(LocalDate dataNascimento) {
+		this.dataNascimento = dataNascimento;
+	}
+	public Autenticacao getAutenticacao() {
+		return autenticacao;
+	}
+	public void setAutenticacao(Autenticacao autenticacao) {
+		this.autenticacao = autenticacao;
+	}
+	@Override
+	public String toString() {
+		return "ClienteDocument [id=" + id + ", nome=" + nome + ", sobrenome=" + sobrenome + ", telFixo=" + telFixo
+				+ ", telCelular=" + telCelular + ", cpf=" + cpf + ", email=" + email + ", sexo=" + sexo
+				+ ", dataNascimento=" + dataNascimento + ", autenticacao=" + autenticacao + "]";
+	}
+}
